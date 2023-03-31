@@ -10,7 +10,6 @@ var player;
 var comp;
 
 function App() {
-  // const [currentPlayer,setCurrentPlayer] = useState('');
   const [name,setName] = useState('');
   const [page,setPage] = useState(1);
   const [playerScore,setPlayerScore] = useState(0);
@@ -29,7 +28,7 @@ function App() {
     constructor(){
       this.deck = this.deploy();
     }
-    deploy(){
+    deploy(){ //create the basic cards deck array
       let temp = [];
       for(let i=1;i<14;i++){
         for(let j=0;j<4;j++){
@@ -38,25 +37,24 @@ function App() {
       }
       return temp;
     }
-    dealDeck(){
+    dealDeck(){ // pick random card from the basic cards deck array and return it
       let rand = Math.floor(Math.random()*this.deck.length);
       let card = this.deck.splice(rand,1);
-      console.log(rand)
       return card[0];
     }
   }
-  const showPage=()=>{
+  const showPage=()=>{ // function that returns different component according to 'page' hook
     if(page===1){
       return <HomePage start={initGame} setPage={setPage} name={name} setName={setName}/>
     }
     else if(page===2){
-      return <GamePage player={player} comp={comp} setPage={setPage} playerScore={playerScore} setPlayerScore={setPlayerScore} compScore={compScore} setCompScore={setCompScore}/>
+      return <GamePage player={player} comp={comp} setPage={setPage} playerScore={playerScore} setPlayerScore={setPlayerScore} compScore={compScore} setCompScore={setCompScore} exit={exit}/>
     }
     else{
-      return <ScorePage setPage={setPage} playerScore={playerScore} setPlayerScore={setPlayerScore} compScore={compScore} setCompScore={setCompScore} comp={comp} player={player} Cards={Cards}/>
+      return <ScorePage setPage={setPage} playerScore={playerScore} setPlayerScore={setPlayerScore} compScore={compScore} setCompScore={setCompScore} comp={comp} player={player} Cards={Cards} exit={exit}/>
     }
   }
-  const initGame=(name)=>{
+  const initGame=(name)=>{ // function that initiate the game, creates 2 cards decks arrays, one for player and second for computer, pushing for each array a random card for 26 times in order to set two different random decks, create two players, and add to their constructor a name and the decks we just created 
     let playerDeck=[];
     let compDeck=[];
     let cards = new Cards();
@@ -64,23 +62,20 @@ function App() {
       playerDeck.push(cards.dealDeck())
       compDeck.push(cards.dealDeck())
     }
-    // debugger
     player = new Player(name,playerDeck);
     comp = new Player('Computer',compDeck);
     setPage(2);
-    // console.log(playerDeck)
-    // console.log(compDeck)
-    // console.log(comp)
-    // console.log(player)
-    // let playerName= tempPlayer.fullName;
-    // return playerName;
   }
 
+  const exit=()=>{ // transfer the page to the home page and set the scores of each oponent back to zero
+    setPage(1);
+    setCompScore(0);
+    setPlayerScore(0);
+  }
 
   return (
     <div className="App">
       <h1 id='mainHeader'>Cards Game</h1>
-      {/* <div>{initGame()}</div> */}
       {showPage()}
     </div>
   );

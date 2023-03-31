@@ -4,21 +4,14 @@ import '../style/game.css'
 
 export default function GamePage(props) {
     const [place,setPlace] = useState(0);
-    // const [playerScore,setPlayerScore] = useState(0);
-    // const [compScore,setCompScore] = useState(0);
-    const refreshScore=()=>{
+    const refreshScore=()=>{ // when pressing the 'next' button => replace the cards shown to the next card at the array,and checks which of them is bigger, the player that has the bigger number gets a score, when the last card been shown the function checks which of them both has the most points and according to that add to the players a win++ or losts++ to their history, and totGames++ to them both
         setPlace(place+1)
         if(place<=25){
             if(props.comp.cardsArr[place]<props.player.cardsArr[place]){
                 props.setPlayerScore(props.playerScore+1)
-                // return alert('Player scored!')
             }
             else if(props.comp.cardsArr[place]>props.player.cardsArr[place]){
                 props.setCompScore(props.compScore+1)
-                // return alert('Computer scored!')
-            }
-            else{
-                // return alert("It's a tie!")
             }
         }
         if(place===25){
@@ -39,8 +32,7 @@ export default function GamePage(props) {
     }
     return (
     <div>
-        {/* <div>{props.func()}</div> */}
-        <button onClick={()=>{props.setPage(1)}} id='exitBtn'>Exit</button>
+        <button onClick={props.exit} id='exitBtn'>Exit</button>
         <div id='scoresDiv'>
             <h3 id='compScore'>Computer scores:{props.compScore}</h3>
             <h3 id='playerScore'>Player scores:{props.playerScore}</h3>

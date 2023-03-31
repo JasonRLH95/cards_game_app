@@ -3,7 +3,7 @@ import '../style/home.css'
 
 export default function HomePage(props) {
     // const [name,setName] = useState('');
-    const validation=()=>{
+    const validation=()=>{//checks if the input gets any text in it, and if the text is english letters only, and return alert according to any situation, if everything is ok => transfer the page to game page and give the function that initiate the game the name that inside that input, that name would be added to the player we'll create
         if(props.name.length===0){
             return alert('You must enter your name first!')
         }

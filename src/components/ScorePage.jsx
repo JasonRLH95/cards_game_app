@@ -2,15 +2,18 @@ import React from 'react';
 import '../style/score.css';
 
 export default function ScorePage(props) {
-    const result=()=>{
+    const result=()=>{ // returns the result of the current game
         if(props.playerScore>props.compScore){
             return 'Player Won The Game!';
         }
         if(props.playerScore<props.compScore){
             return 'Computer Won The Game!'
         }
+        if(props.playerScore==props.compScore){
+            return "It's A Tie!"
+        }
     }
-    const playAgain=()=>{
+    const playAgain=()=>{ //redeploy the cards deck randomly for each oponent and set the scores back to zero
         props.setPage(2)
         props.setPlayerScore(0)
         props.setCompScore(0)
@@ -29,7 +32,7 @@ export default function ScorePage(props) {
     }
     return (
     <div>
-        <button onClick={()=>{props.setPage(1)}} id='exitBtn2'>Exit</button>
+        <button onClick={props.exit} id='exitBtn2'>Exit</button>
         <h2>Final scores:</h2>
         <h3>Player:<span className='resultsSpan'>{props.playerScore}</span></h3>
         <h3>Computer:<span className='resultsSpan'>{props.compScore}</span></h3>
