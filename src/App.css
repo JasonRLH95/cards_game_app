@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  background-image: radial-gradient(rgb(5,150,5),rgb(0,0,0));
+  height: 100vh;
+}
+
+#mainHeader{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style:italic;
+  color: green;
+  text-shadow: 2px 2px black;
+  /* border: 1px solid black; */
+  height: 75px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+}

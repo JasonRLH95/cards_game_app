@@ -1,0 +1,28 @@
+.resultsSpan{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+#againBtn{
+    width: 200px;
+    height: 35px;
+    background-color: rgb(5,155,5);
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    /* position: absolute;
+    bottom: 50px;
+    left: 42vw; */
+}
+#exitBtn2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(5, 155, 5);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}

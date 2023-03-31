@@ -1,0 +1,28 @@
+#homeDiv{
+    position: relative;
+    width: 300px;
+    height: 120px;
+    margin: auto;
+}
+#homeHeader{
+    font-size: 50px;
+    color: green;
+    text-shadow: 2px 2px black;
+}
+#homeInput{
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    text-indent: 10px;
+}
+#homeBtn{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(5, 150, 5);
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}

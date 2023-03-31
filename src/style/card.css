@@ -1,0 +1,13 @@
+.cardDiv{
+    width: 140px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: lightgray;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardNum{
+    font-size: 65px;
+}
