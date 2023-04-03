@@ -11,3 +11,9 @@
 .cardNum{
     font-size: 65px;
 }
+@media(max-width:768px){
+    .cardDiv{
+        width: 100px;
+        height: 150px;
+    }
+}
