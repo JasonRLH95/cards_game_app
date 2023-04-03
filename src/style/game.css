@@ -92,6 +92,14 @@
     #compName,#playerName{
         font-size: 23px;
     }
+    #compDiv{
+        left: 50vw;
+        top: 100px;
+    }
+    #playerDiv{
+        right: 50vw;
+        bottom: 100px;
+    }
     #exitBtn{
         width: 60px;
     }
