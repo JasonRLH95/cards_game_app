@@ -26,3 +26,9 @@
     font-size: 22px;
     font-weight: bold;
 }
+
+@media(max-width:768px){
+    #exitBtn2{
+        width: 60px;
+    }
+}

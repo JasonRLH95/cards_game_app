@@ -1,7 +1,6 @@
 #scoresDiv{
     width: 200px;
     height: 50px;
-    /* border: 1px solid black; */
     position: absolute;
     top: 160px;
     left: 0;
@@ -25,27 +24,17 @@
 }
 #compDiv{
     position: absolute;
-    /* background-color: red; */
     width: 250px;
     height: 300px;
     left: 60vw;
     top: 75px;
-    /* display: flex; */
 }
 #compName{
     text-shadow: 2px 2px black;
     color: white;
-    /* position: absolute; */
-    /* right: 50px; */
 }
-/* #compCard{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-} */
 #playerDiv{
     position: absolute;
-    /* background-color: red; */
     width: 250px;
     height: 300px;
     right: 60vw;
@@ -54,17 +43,8 @@
 #playerName{
     text-shadow: 2px 2px black;
     color: white;
-    /* position: absolute;
-    left: 80px;
-    bottom: 14px; */
-    /* margin: 220px auto; */
     font-size: 36px;
 }
-/* #playerCard{
-    position: absolute;
-    top: 0;
-    right: 0;
-} */
 #nextBtn{
     width: 200px;
     height: 35px;
@@ -94,17 +74,17 @@
     }
     #compDiv{
         left: 50vw;
-        top: 100px;
+        bottom: 50vh;
     }
     #playerDiv{
         right: 50vw;
-        bottom: 100px;
+        top: 50vh;
     }
     #exitBtn{
         width: 60px;
     }
     #nextBtn{
-        width: 150px;
+        width: 125px;
         bottom: 80px;
         left: 35vw;
     }
